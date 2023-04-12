@@ -1,10 +1,9 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
 export default function Home() {
-    // const stateForRedux=useSelector((state)=>state.user.role)
-    const stateForRedux=useSelector((state)=>state.user.type)
-    // const stateForRedux=useSelector((state)=>state)
+    const stateForRedux=useSelector((state)=>state.auth)
+    console.log('stateForRedux: ', stateForRedux);
   return (
-    <div className='text-yellow-300 bg-black text-2xl p-5 text-center'>Home and this is Redux {JSON.stringify(stateForRedux)}</div>
+    <div className='p-5 text-2xl text-center text-yellow-300 bg-black'>Welcome Home and this is Redux Storage {JSON.stringify(stateForRedux)}</div>
   )
 }
